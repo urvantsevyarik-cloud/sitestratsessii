@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Антикризисная стратегическая сессия: план на 90 дней | Алексей Урванцев</title>
+<meta name="description" content="Двухдневная антикризисная сессия для руководителей: решения по выручке, ключевым клиентам, переговорам и людям. На выходе план на 90 дней с ответственными и сроками.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="План на 90 дней, который команда начнёт выполнять в понедельник">
+<meta property="og:description" content="Антикризисная стратегическая сессия для руководителей компании. Алексей Урванцев.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/*! urvancev-ux v1.0.0 | CSS для лендинга «Антикризисная стратегическая сессия» (Tilda)
+ *  Подключается в HEAD ПОСЛЕ стилей Tilda. Цвета бренда не меняются.
+ *  Меняйте переменные в :root, а не отдельные правила.
+ */
+
+:root {
+  --u-font: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --u-header-h: 64px;            /* JS подставит реальную высоту фиксированного меню */
+  --u-cta-bg: #111;              /* JS возьмёт цвет с вашей кнопки «Оставить заявку» */
+  --u-cta-fg: #fff;
+  --u-cta-radius: 8px;
+  --u-par-gap: 1em;              /* расстояние между абзацами */
+}
+
+/* ---------- Базовое поведение страницы ---------- */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--u-header-h) + 12px);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: clip;              /* страховка от горизонтальной прокрутки на телефоне */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#allrecords img { max-width: 100%; height: auto; }
+
+/* ---------- Шрифт: Montserrat везде, заголовки Bold ---------- */
+
+body,
+#allrecords,
+#allrecords :where(h1, h2, h3, h4, h5, h6, p, li, a, span, div, b, strong, em,
+                   button, input, textarea, select, label, td, th) {
+  font-family: var(--u-font) !important;
+}
+
+#allrecords :where(h1, h2, h3, h4, h5, h6, .t-title, .t-heading, .t-name) {
+  font-weight: 700 !important;
+}
+
+#allrecords :where(strong, b) { font-weight: 600; }
+
+/* ---------- Переносы строк ---------- */
+
+/* Заголовки: ровные строки без одинокого слова в конце */
+#allrecords :where(h1, h2, h3, h4, .t-title, .t-heading, .t-name) {
+  text-wrap: balance;
+  hyphens: none;
+  overflow-wrap: break-word;
+}
+
+/* Текст: без «висячих» коротких хвостов, без автопереносов слов */
+#allrecords :where(p, li, .t-text, .t-descr) {
+  text-wrap: pretty;
+  hyphens: manual;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* ---------- Абзацы ---------- */
+
+/* Абзацы, которые JS собрал из двойных <br> */
+#allrecords .u-p { margin: 0 0 var(--u-par-gap) !important; }
+#allrecords .u-p:last-child { margin-bottom: 0 !important; }
+
+/* Жирный заход в начале абзаца («Кризис называем вслух.») — отдельной строкой */
+#allrecords .u-lead {
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+#allrecords .t-container :where(li) { margin-bottom: 0.5em; }
+#allrecords .t-container :where(li:last-child) { margin-bottom: 0; }
+
+/* Блоки «вопрос — ответ» и модальные письма: воздух между абзацами */
+#allrecords .t-popup :where(p, .u-p) { margin-bottom: 1em; }
+
+/* ---------- Мобильная версия ---------- */
+
+@media (max-width: 640px) {
+
+  /* Основной текст */
+  #allrecords .t-container :where(.t-text, .t-descr, p, li) {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Вводные абзацы чуть крупнее */
+  #allrecords .t-container :where(.t-descr) {
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Заголовок первого экрана */
+  #allrecords .t-container :where(h1, .t-title_xxl, .t-title_xl) {
+    font-size: clamp(26px, 7.4vw, 32px) !important;
+    line-height: 1.18 !important;
+    margin-bottom: 0.5em;
+  }
+
+  /* Заголовки разделов */
+  #allrecords .t-container :where(h2, .t-title) {
+    font-size: clamp(22px, 6.2vw, 28px) !important;
+    line-height: 1.22 !important;
+  }
+
+  /* Подзаголовки карточек и пунктов */
+  #allrecords .t-container :where(h3, h4, .t-heading, .t-name) {
+    font-size: 19px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Крупные тап-зоны */
+  #allrecords :where(.t-btn, .t-submit, button, [type='submit']) {
+    min-height: 48px;
+  }
+
+  /* Контакты в подвале и текстовые ссылки */
+  #allrecords .t-container :where(a[href^='tel:'], a[href^='mailto:'], a[href*='t.me']) {
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+  /* Формы: 16px, чтобы iOS не увеличивал страницу при фокусе */
+  #allrecords :where(.t-input, .t-select, textarea.t-input) {
+    font-size: 16px !important;
+    min-height: 48px;
+  }
+  #allrecords .t-input-group { margin-bottom: 16px; }
+  #allrecords .t-input-title { font-size: 14px !important; line-height: 1.4 !important; }
+  #allrecords .t-checkbox__control { font-size: 14px !important; line-height: 1.5 !important; }
+}
+
+/* ---------- Нижняя панель быстрой связи (только телефон/планшет) ---------- */
+
+.u-cta { display: none; }
+
+@media (max-width: 768px) {
+  .u-cta {
+    display: flex;
+    gap: 8px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9990;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 255, 255, 0.96);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(110%);
+    visibility: hidden;
+    transition: transform 0.25s ease, visibility 0s linear 0.25s;
+  }
+  .u-cta.is-visible {
+    transform: none;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  .u-cta__main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 16px;
+    background: var(--u-cta-bg);
+    color: var(--u-cta-fg) !important;
+    border-radius: var(--u-cta-radius);
+    font: 600 15px/1.2 var(--u-font);
+    text-decoration: none;
+  }
+  .u-cta__call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    min-height: 48px;
+    border: 2px solid var(--u-cta-bg);
+    border-radius: var(--u-cta-radius);
+    color: var(--u-cta-bg);
+  }
+  .u-cta__call svg { width: 22px; height: 22px; fill: currentColor; }
+  .u-cta a:focus-visible { outline: 3px solid currentColor; outline-offset: 2px; }
+}
+
+/* ---------- Уважение к настройкам «уменьшить движение» ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #allrecords *,
+  .u-cta {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Язык Apple: кинематографичный тёмный старт, карусель, плитки разного размера, огромные цифры, фото на всю ширину. Шрифт Montserrat. */
+:root{/* АКЦЕНТНЫЙ ЦВЕТ: поменяйте эти три значения на цвет с вашего сайта */--ink:#1d1d1f;--ink-2:#424245;--muted:#6e6e73;--line:#d2d2d7;--soft:#f5f5f7;--tile:#1c1c1e;--accent:#0071e3;--accent-hover:#0077ed;--accent-on-dark:#2997ff;--gray-d:#86868b;--max:1180px;--pad:22px;--sec-y:80px}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-size:17px;line-height:1.55}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{letter-spacing:-.03em;margin:0}
+h2{font-size:clamp(30px,6.4vw,56px);line-height:1.05;margin:1.7em 0 .6em;max-width:16em;text-wrap:balance}
+.prose>h2:first-child,.head h2{margin-top:0}
+h3{font-size:20px;line-height:1.2;margin-bottom:.45em}
+.prose p,.prose ul,.prose ol{max-width:36em;margin:0 0 1.1em}
+.head{margin:0 0 40px}
+.note{color:var(--muted);font-size:14px;line-height:1.5}
+.plain.u-lead{display:inline!important}
+.statement{font-size:clamp(26px,5.4vw,48px);font-weight:700;line-height:1.1;letter-spacing:-.03em;margin:1.4em 0 0!important}
+.prose .statement{max-width:18em}
+.lead--sm{font-size:clamp(22px,4vw,34px);font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-top:48px;max-width:20em}
+
+.sec{padding:var(--sec-y) 0}
+.sec--soft{background:var(--soft)}
+.sec--dark{background:#000;color:var(--soft)}
+.sec--dark h2,.sec--dark h3{color:#fff}
+.sec--dark a{color:var(--accent-on-dark)}
+
+/* Шапка тёмная, матовое стекло */
+.top{position:sticky;top:0;z-index:50;background:rgba(22,22,23,.8);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px}
+.brand{color:#f5f5f7;font-weight:700;font-size:15px}.brand:hover{text-decoration:none}
+.nav{display:none}
+.nav a{color:#f5f5f7;opacity:.8;padding:10px 14px;font-size:13px;font-weight:500}.nav a:hover{opacity:1;text-decoration:none}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;background:var(--accent);color:#fff!important;border:0;border-radius:980px;cursor:pointer;font:600 17px/1.2 var(--u-font);text-align:center;transition:background .2s}
+.btn:hover{background:var(--accent-hover);text-decoration:none}
+.btn--sm{min-height:34px;padding:0 16px;font-size:13px;white-space:nowrap}.btn--block{width:100%}
+.more{font-size:17px;font-weight:500;color:var(--accent-on-dark)}
+a:focus-visible,.btn:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent-on-dark);outline-offset:3px}
+
+/* Первый экран: чёрный, фото растворяется в чёрный */
+.hero{position:relative;background:#000;color:var(--soft);overflow:hidden}
+.hero__in{display:flex;flex-direction:column;padding-bottom:56px}
+.hero__img{order:-1;width:calc(100% + 2*var(--pad));max-width:none;margin:0 calc(var(--pad)*-1);height:60svh;min-height:380px;object-fit:cover;object-position:50% 22%;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.hero__text{position:relative;margin-top:-90px}
+.hero h1{font-size:clamp(34px,9vw,64px);line-height:1.03;color:#f5f5f7}
+.hero h1 span{color:var(--gray-d)}
+.hero .lead{color:#d2d2d7;font-size:clamp(17px,2vw,21px);line-height:1.45;margin:24px 0 0;max-width:32em}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin:32px 0 0}
+.hero .note{color:var(--gray-d);margin:20px 0 0;max-width:28em}
+.author{position:relative;color:var(--gray-d);font-size:13px;line-height:1.5;max-width:34em;margin:40px 0 0;padding-top:20px;border-top:1px solid #2c2c2e}
+
+/* Симптомы: карусель карточек */
+.grid{display:grid;gap:14px}
+.sec--dark .grid--4{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--pad)*-1);padding:0 var(--pad) 8px;scrollbar-width:none}
+.grid--4::-webkit-scrollbar{display:none}
+.card{flex:0 0 78%;max-width:340px;min-height:360px;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between;gap:24px;background:var(--tile);border-radius:28px;padding:28px}
+.card h3{font-size:clamp(30px,8vw,40px);line-height:1.05;margin:0}
+.card p{color:#a1a1a6;margin:0}
+
+/* Причины: огромные цифры – это реальная последовательность */
+.prose .steps{max-width:none;list-style:none;counter-reset:s;padding:0;margin:48px 0 0;border-bottom:1px solid var(--line)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:64px 1fr;gap:4px 16px;padding:28px 0;border-top:1px solid var(--line);margin:0}
+.steps li::before{content:counter(s);grid-row:1/3;font-size:56px;font-weight:700;line-height:.9;color:var(--accent);letter-spacing:-.04em}
+.steps h3{font-size:clamp(22px,3.6vw,32px);line-height:1.1;margin:0 0 .4em}
+.steps p{margin:0;color:var(--ink-2);max-width:36em}
+
+/* Тезис, который проявляется при прокрутке */
+.reveal{font-size:clamp(22px,4vw,36px);font-weight:700;line-height:1.2;letter-spacing:-.025em;max-width:24em;margin:0;color:#fff}
+.js-reveal .w{color:#48484a;transition:color .25s}
+.js-reveal .w.on{color:#fff}
+
+.list{padding-left:1.2em}.list li{margin-bottom:.6em}
+.pic{width:100vw;max-width:none;margin:56px 0 0 calc(50% - 50vw);aspect-ratio:4/3;object-fit:cover}
+.pic--logos{width:100%;margin:48px 0 0;aspect-ratio:auto;object-fit:contain;background:var(--soft);border-radius:28px;padding:24px}
+
+/* Плитки разного размера */
+.item{background:var(--soft);border-radius:28px;padding:28px 24px}
+.sec--soft .item{background:#fff}
+.item p{margin:0;color:var(--ink-2)}
+.item h3{font-size:clamp(21px,3vw,26px);line-height:1.15}
+#program .item:first-child{background:#000;color:var(--soft)}
+#program .item:first-child h3{color:#fff;font-size:clamp(28px,5vw,48px);line-height:1.05}
+#program .item:first-child p{color:#a1a1a6;max-width:28em;font-size:19px}
+#program .item:nth-child(4){background:var(--accent);color:#fff}
+#program .item:nth-child(4) p{color:rgba(255,255,255,.88)}
+.big{font-size:clamp(56px,9vw,96px);font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--accent);margin:0 0 .2em!important}
+.big small{display:block;font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin-top:8px}
+
+.faq details{border-top:1px solid var(--line)}.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;min-height:68px;padding:20px 44px 20px 0;position:relative;font-size:clamp(18px,2.4vw,22px);font-weight:600;letter-spacing:-.01em;display:flex;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';position:absolute;right:4px;font-size:30px;font-weight:300;color:var(--muted);line-height:1}
+.faq details[open] summary::after{content:'–'}
+.faq details p{margin:0 0 20px;color:var(--ink-2)}
+
+.form-wrap{max-width:640px}
+.sec--dark .form-wrap h2{margin:0}
+.lead--light{color:#a1a1a6;margin:20px 0 40px;font-size:19px}
+form{color-scheme:dark}
+form label{display:block;margin-bottom:18px;font-size:14px;font-weight:500;color:#a1a1a6}
+form input[type=text],form select{display:block;width:100%;min-height:52px;margin-top:8px;padding:0 16px;border:1px solid #424245;border-radius:14px;background:var(--tile);color:#f5f5f7;font:400 16px var(--u-font)}
+form input[type=text]:focus,form select:focus{border-color:var(--accent-on-dark);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent-on-dark) 35%,transparent)}
+form .check{display:flex;gap:12px;align-items:flex-start;font-weight:400;line-height:1.5;margin:24px 0}
+form .check input{width:22px;height:22px;margin:2px 0 0;flex:none;accent-color:var(--accent)}
+.form-err{background:#3a1512;color:#ffb4ab;padding:12px 16px;border-radius:12px;font-weight:600}
+.ok{font-size:22px;font-weight:600;color:#fff}
+input:invalid.touched,select:invalid.touched{border-color:#ff6961}
+
+.foot{background:var(--soft);color:var(--muted);padding:32px 0 calc(32px + 76px);font-size:12px;line-height:1.5}
+.foot .brand{font-size:14px;color:var(--ink)}
+.foot ul{list-style:none;padding:0;margin:14px 0 0}.foot li{margin-bottom:2px}
+.foot a{color:var(--ink-2);display:inline-block;padding:8px 0}
+
+@media(prefers-reduced-motion:reduce){.js-reveal .w{color:#fff}}
+@media(min-width:760px){
+ :root{--pad:32px;--sec-y:128px}
+ body{font-size:18px}
+ .grid--2{grid-template-columns:1fr 1fr;gap:20px}
+ .item{padding:40px 36px}
+ #program .item:first-child{grid-column:1/-1;padding:56px 48px}
+ .pic{aspect-ratio:21/9}
+ .steps li{grid-template-columns:140px 1fr;gap:0 32px}.steps li::before{font-size:96px}
+}
+@media(min-width:960px){
+ .nav{display:flex}
+ .hero{min-height:min(100svh,860px);display:flex;align-items:center}
+ .hero__in{padding:80px var(--pad);width:100%}
+ .hero__img{position:absolute;right:0;top:0;bottom:0;order:0;width:60%;height:100%;margin:0;-webkit-mask-image:linear-gradient(to left,#000 45%,transparent);mask-image:linear-gradient(to left,#000 45%,transparent)}
+ .hero__text{margin-top:0;max-width:640px}
+ .sec--dark .grid--4{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible;margin:0;padding:0}
+ .card{max-width:none;min-height:440px}
+ .foot{padding-bottom:32px}
+}
+
+/* ---------- Читаемость: крупнее шрифт, выше контраст ---------- */
+body{font-size:18px;line-height:1.6}
+h3{font-size:22px}
+.prose p,.prose ul,.prose ol{max-width:34em}
+.note{font-size:15px;color:#515154}
+.hero .note,.author{color:#aeaeb2}
+.author{font-size:15px}
+.hero h1 span{color:#9a9aa0}
+.hero .lead{color:#e5e5ea;font-size:clamp(18px,2.2vw,23px)}
+.nav a{font-size:14px}.btn--sm{font-size:14px}
+.card p{font-size:18px;color:#c7c7cc}
+.lead--light,form label{color:#c7c7cc}
+form label{font-size:16px}
+.item p,.steps p,.faq details p{color:#333336}
+.big small{font-size:18px}
+.js-reveal .w{color:#636366}
+.foot{font-size:14px}
+
+/* ---------- Раскрывающиеся плашки ---------- */
+.prose .faq{max-width:760px}
+.faq summary{font-size:clamp(19px,2.6vw,24px)}
+.faq details ul{margin:0 0 20px}
+@keyframes u-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+details[open]>:not(summary){animation:u-in .3s ease}
+@media(prefers-reduced-motion:reduce){details[open]>:not(summary){animation:none}}
+#program .grid--2{align-items:start}
+details.item{padding:0}
+details.item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px;min-height:76px}
+details.item summary::-webkit-details-marker{display:none}
+details.item summary h3{margin:0}
+details.item summary::after{content:'+';flex:none;font-size:34px;font-weight:300;line-height:1;color:var(--accent)}
+details.item[open] summary::after{content:'–'}
+details.item p{padding:0 24px 28px}
+#program .item:first-child summary::after{color:var(--accent-on-dark)}
+#program .item:nth-child(4) summary::after{color:#fff}
+@media(min-width:760px){details.item summary{padding:32px 36px}details.item p{padding:0 36px 36px}#program .item:first-child summary{padding:44px 48px}#program .item:first-child p{padding:0 48px 48px}}
+
+/* ---------- Вкладки «Для кого» ---------- */
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 calc(var(--pad)*-1) 20px;padding:0 var(--pad)}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;min-height:48px;padding:0 22px;border:1px solid var(--line);border-radius:980px;background:#fff;color:var(--ink);font:600 16px/1 var(--u-font);cursor:pointer;transition:background .2s,color .2s}
+.tabs button[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tabpanel{background:#fff;border-radius:28px;padding:28px 24px}
+.tabpanel[hidden]{display:none}
+.tabpanel h3{font-size:clamp(24px,3.6vw,34px);line-height:1.1;margin-bottom:.5em}
+.tabpanel p{margin:0;max-width:34em;color:#333336}
+@media(min-width:760px){.tabs{margin:0 0 20px;padding:0}.tabpanel{padding:44px 48px}}
+@media(min-width:960px){body{font-size:20px}}
+
+</style>
+</head>
+<body>
+<div id="allrecords">
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#top">Алексей Урванцев</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#program">Программа</a>
+      <a href="#process">Как проходит</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a class="btn btn--sm" href="#zayavka">Оставить заявку</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <h1>План на 90 дней, <span>который команда начнёт выполнять в понедельник</span></h1>
+      <p class="lead">Антикризисная стратегическая сессия для руководителей компании. За два дня вы принимаете решения по выручке, ключевым клиентам, переговорам с поставщиками и банками и по людям – и выходите с планом, где у каждого решения есть ответственный, срок и условие пересмотра.</p>
+      <p class="cta"><a class="btn" href="#zayavka">Обсудить ситуацию</a><a class="more" href="#process">Как проходит ›</a></p>
+      <p class="note">30 минут с Алексеем Урванцевым. Разберём вашу ситуацию и скажем, нужна ли вам сессия.</p>
+    </div>
+    <img class="hero__img" src="https://static.tildacdn.com/tila3966-3233-4339-a465-653739373134/5384133975812549663.jpg" alt="Алексей Урванцев — тренер-практик" fetchpriority="high">
+    <p class="author">Алексей Урванцев, тренер-практик по авторитетному влиянию. 500+ корпоративных проектов.</p>
+  </div>
+</section>
+
+<section class="sec sec--dark">
+  <div class="wrap">
+    <div class="grid grid--4">
+      <article class="card"><h3>Продажи.</h3><p>Выручка падает, конверсия входящих хуже, чем полгода назад, план не выполняется.</p></article>
+      <article class="card"><h3>Клиенты.</h3><p>Бюджеты заморожены. Часть клиентов ушла молча. Оставшиеся торгуются за каждый процент.</p></article>
+      <article class="card"><h3>Контрагенты.</h3><p>Поставщики ужесточают условия, банк не идёт навстречу, сети выкручивают руки.</p></article>
+      <article class="card"><h3>Команда.</h3><p>Люди на стрессе. Менеджеры объясняют провал рынком. Сильные начинают смотреть вакансии. Плохие новости доходят до вас с опозданием.</p></article>
+    </div>
+    <p class="prose lead--sm">Если узнаёте хотя бы два пункта – это симптомы. Причина обычно одна, и она ниже.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap prose">
+    <h2>Почему обычная стратегическая сессия в кризис не помогает</h2>
+    <p>Стратегическая сессия – рабочий инструмент. Но в кризис она ломается в трёх местах.</p>
+    <ol class="steps">
+      <li><h3>Горизонт не тот.</h3><p>Планировать на три года, когда непонятен следующий квартал, бессмысленно. Нужен план на 90 дней с заранее назначенными точками пересмотра.</p></li>
+      <li><h3>Решения стягиваются к одному человеку.</h3><p>Под угрозой организации сужают поиск вариантов и централизуют принятие решений. Это описанный эффект, а не особенность вашей команды.</p></li>
+      <li><h3>В плане нет переговорного блока.</h3><p>Давят поставщики, банки, сети, арендодатели. Решения, принятые без плана переговоров, разбиваются о первого же монополиста.</p></li>
+    </ol>
+    <p class="statement">Антикризисный штаб собран под эти три дефицита.</p>
+    <img class="pic" src="https://static.tildacdn.com/tild3933-3664-4162-b438-633062623963/photo-1623652554515-.jpg" alt="Работа в зале на стратегической сессии" loading="lazy">
+  </div>
+</section>
+
+<section class="sec sec--dark">
+  <div class="wrap">
+    <h2>Сначала ответ на два вопроса: какой это кризис и кто способен его вытащить</h2>
+    <p class="reveal">Внешний кризис – это рынок, ставка, поставщики, спрос. Внутренний – уход ключевых людей, конфликт собственников, падение управляемости. Чаще всего второй прячется за первым, и пока это не разделено, компания лечит не то.</p>
+  </div>
+</section>
+
+<section class="sec sec--soft">
+  <div class="wrap prose">
+    <p>Поэтому работа начинается до сессии. Я отдельно разговариваю с каждым ключевым руководителем, и за этот день становятся видны две вещи.</p>
+    <div class="faq">
+<details name="diag"><summary>Насколько по-разному вы видите положение дел</summary><p>Каждый оценивает три параметра: сколько у компании денег, какие есть альтернативы, сколько есть времени. Если первое лицо считает, что запас три квартала, а коммерческий директор – что полтора месяца, общий план невозможен, пока эта разница не вскрыта.</p></details>
+    <details name="diag"><summary>Кто в команде способен предложить решение, а кто только диагноз</summary><p>Маркер виден быстро. Один отвечает про проблемы развёрнуто и с удовольствием, а на вопрос о возможностях не говорит ничего. Другой на тот же вопрос сразу даёт две-три конкретные идеи. Это не про должность и не про стаж: бывает, что все идеи находятся на уровне руководителей отделов, а у топов их нет ни одной.</p></details>
+    </div>
+    <p>От этого зависит, как будут собраны группы в зале. И это решает исход сессии больше, чем программа.</p>
+    <p class="statement">Сначала диагноз, потом программа. Не наоборот.</p>
+    <img class="pic" src="https://static.tildacdn.com/tild6563-3030-4462-b334-393764663133/photo-1767175473698-.jpg" alt="Алексей Урванцев ведёт сессию" loading="lazy">
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap prose">
+    <h2>Кто ведёт и почему это внешний человек</h2>
+    <p><strong class="plain">Алексей Урванцев.</strong> Тренер-практик по авторитетному влиянию: продажи, выступления, переговоры, управление. 500+ корпоративных проектов в производстве, торговле, банках, ритейле.</p>
+    <p>В кризис внутри компании перестают говорить правду: любая позиция читается как борьба за ресурс или за место. Поэтому модератор нужен со стороны.</p>
+    <ul class="list">
+      <li>Не участвую во внутренних конфликтах и не защищаю ничью сторону</li>
+      <li>Задаю вопросы, которые внутри задавать неудобно</li>
+      <li>Перевожу важное с языка первого лица на язык исполнителей</li>
+      <li>Ухожу после результата и не держусь за место</li>
+    </ul>
+    <div class="faq"><details><summary>Регалии</summary><ul class="list">
+      <li>Четырёхкратный лауреат Национальной деловой Премии «Капитаны российского бизнеса» в номинации «Лучший бизнес-тренер» (журнал «Управление персоналом»)</li>
+      <li>Участник списка «Элита менеджмента – лучшие спикеры по управлению» (BestSpeakers.ru, 2026)</li>
+      <li>ТОП-10 российских спикеров по лидерству (BestSpeakers.ru, 2026)</li>
+      <li>Участник списка «Топ-10 спикеров-модераторов для форумов, конференций и бизнес-событий» (BestSpeakers.ru, 2026)</li>
+    </ul></details></div>
+    <img class="pic pic--logos" src="https://static.tildacdn.com/tild3933-3962-4436-a263-353835326338/__2026-10-21__104546.png" alt="Логотипы компаний-клиентов" loading="lazy">
+  </div>
+</section>
+
+<section class="sec sec--soft" id="program">
+  <div class="wrap">
+    <div class="head"><h2>Что вы унесёте с сессии</h2></div>
+    <div class="grid grid--2">
+      <details class="item" name="prog" open><summary><h3>План на 90 дней с триггерами.</h3></summary><p>Что делаем, в какие сроки, кто отвечает, как проверяем. И отдельно: при каком событии возвращаемся к плану роста, а при каком переходим к плану Б.</p></details>
+      <details class="item" name="prog"><summary><h3>Программа по 20 ключевым клиентам.</h3></summary><p>Привлечение дорожает, поэтому главный рычаг – те, кто уже с вами. По каждому из двадцати: что делаем в ближайшие 90 дней и кто за это отвечает.</p></details>
+      <details class="item" name="prog"><summary><h3>Возврат ушедших и спящих.</h3></summary><p>Кто кому звонит на этой неделе, с каким предложением и что говорит первая фраза.</p></details>
+      <details class="item" name="prog"><summary><h3>Предложение, которое проходит через замороженный бюджет.</h3></summary><p>Продукт, описанный через деньги, сроки и снятые риски клиента. Варианты для тех, кто не может подписать полную сумму, – без демпинга.</p></details>
+      <details class="item" name="prog"><summary><h3>План переговоров с поставщиками, банками и сетями.</h3></summary><p>Где искать «разные деньги»: отсрочка, каникулы по платежам, мораторий на штрафы, пересмотр объёмов. И обязательное условие в каждой уступке – при каких условиях возвращаемся к прежним договорённостям. Без этого временные послабления становятся новой нормой.</p></details>
+      <details class="item" name="prog"><summary><h3>Решения по спорным точкам между подразделениями.</h3></summary><p>Вопросы, которые висят месяцами, потому что их некому развести.</p></details>
+      <details class="item" name="prog"><summary><h3>Карта рисков по людям.</h3></summary><p>Кто затормозит внедрение, кто близок к выгоранию, что с каждым делаем.</p></details>
+    </div>
+    <p class="prose note">Точный состав определяем после диагностики. Не всё из списка нужно каждой компании.</p>
+  </div>
+</section>
+
+<section class="sec" id="process">
+  <div class="wrap prose">
+    <h2>Как устроена работа в зале</h2>
+    <div class="faq">
+
+    <details name="hall" open><summary>Кризис называем вслух</summary><p>Сессия начинается с того, что первое лицо честно проговаривает положение дел. Без «всё нормально, работаем» и без «всё пропало»: обе крайности убивают доверие и дальнейший разговор. Помогаю подготовить это вступление заранее.</p></details>
+    <details name="hall"><summary>Первое лицо высказывается последним</summary><p>Простое правило, которое сохраняет на столе информацию, которую иначе никто не озвучит.</p></details>
+    <details name="hall"><summary>Состав групп собирается под вашу команду</summary><p>Если посадить руководителей высшего звена вместе с руководителями отделов, первые начнут управлять обсуждением, а вторые замолчат. Идеи у них есть, но до флипчарта они не дойдут: их отсеют как непродуманные раньше, чем успеют озвучить. Поэтому в одних компаниях уровни разводятся по разным группам, и топы получают собственную задачу с высокой планкой. В других нужно наоборот смешать подразделения, чтобы коммерция услышала производство. Что именно нужно вам – видно по итогам предсессионного опроса.</p></details>
+    <details name="hall"><summary>Группы соревнуются</summary><p>Когда между группами идёт счёт по количеству и качеству идей, через час люди перестают следить за статусом и начинают спорить по существу.</p></details>
+    <details name="hall"><summary>Разделяем то, что контролируем, и то, что не контролируем</summary><p>В дефиците внимание сужается до ближайшей угрозы, и группа перестаёт видеть варианты. Это снимается процедурно, а не уговорами.</p></details>
+    <details name="hall"><summary>Плохие новости приносят по формуле</summary><p>факт, последствие, предложение. Команды, где за плохую новость не наказывают, замечают проблемы раньше остальных.</p></details>
+    <details name="hall"><summary>Два дня</summary><p>первый – диагностика и решения, второй – проверка решений на реализм и сборка плана внедрения.</p></details>
+    </div>
+    <img class="pic" src="https://static.tildacdn.com/tild3933-3664-4162-b438-633062623963/photo-1623652554515-.jpg" alt="Участники сессии работают в группах" loading="lazy">
+
+    <h2>Чего на сессии не будет</h2>
+    <ul class="list">
+      <li>Стратегии на три года</li>
+      <li>Верёвочных курсов и упражнений на сплочение</li>
+      <li>Решений, которые принял я, а вам предложил согласиться</li>
+      <li>Протокола, который прочитают один раз</li>
+    </ul>
+    <p class="statement">Я веду процесс. Решения принимаете вы.</p>
+
+    <h2>Что будет после сессии</h2>
+    <p>Решения не отменяют существующие процессы и не ломаются об них: новое встраивается в то, что уже работает. Это принцип методики внедрения изменений «Переплавка©» – достраиваем, а не отменяем.</p>
+    <p>У каждого решения из плана пять параметров: что, когда, кто, как проверяем и что делаем при отклонении. Поэтому через три недели план не превращается в воспоминание о хорошем дне.</p>
+    <p>Если нужна поддержка внедрения – обсуждаем отдельно.</p>
+  </div>
+</section>
+
+<section class="sec sec--soft">
+  <div class="wrap">
+    <div class="head"><h2>Для кого</h2></div>
+    <div class="tabbed"><div class="tabs" role="tablist" aria-label="Для кого"><button role="tab" type="button" aria-selected="false">Собственнику</button><button role="tab" type="button" aria-selected="false">Коммерческому директору</button><button role="tab" type="button" aria-selected="false">HR-директору</button><button role="tab" type="button" aria-selected="false">Производству и сервису</button></div><div class="tabpanel" role="tabpanel"><h3>Собственнику и генеральному директору.</h3><p>Вы, скорее всего, знаете, что делать. Команда не знает, не верит или понимает по-своему. Штаб переводит ваше решение в их решение, и дальше его не нужно продавливать.</p></div><div class="tabpanel" role="tabpanel"><h3>Коммерческому директору.</h3><p>Тренинг по продажам чинит технику разговора. Но если предложение не проходит через замороженный бюджет, а приоритеты по базе не расставлены, техника не спасёт. Штаб чинит то, с чем менеджер идёт к клиенту.</p></div><div class="tabpanel" role="tabpanel"><h3>HR-директору.</h3><p>Вопрос про отдачу прилетит в любом случае. Результат штаба измерим: решения с ответственными, сроками и показателями плюс карта рисков по людям. Отдельно – помощь первому лицу в подготовке честного разговора с командой.</p></div><div class="tabpanel" role="tabpanel"><h3>Руководителям производства, логистики, сервиса.</h3><p>Большая часть кризисных потерь возникает на стыках между подразделениями. Развести их можно только вместе.</p></div></div>
+  </div>
+</section>
+
+<section class="sec" id="cases">
+  <div class="wrap">
+    <div class="head"><h2>Результаты клиентов</h2></div>
+    <div class="grid grid--2">
+      <article class="item"><p class="big">+20%</p><h3>Уфаойл, нефтетрейдер.</h3><p>+20% продаж за четыре месяца в кризисный для отрасли год. Результат проекта по продажам.</p></article>
+      <article class="item"><p class="big">20<small>сделок в неделю</small></p><h3>УКС «Авитек», Киров.</h3><p>Экс-генеральный директор Алексей Лопаткин: после пустого месяца вышли на 20 сделок в неделю без демпинга и распродаж.</p></article>
+      <article class="item"><h3>ООО «Лаконд», кондитерская фабрика, октябрь 2025.</h3><p>Стратегическая сессия: чёткий сценарий, вовлечены все участники, по итогам приоритизированы стратегические инициативы на 2025–2027 годы.</p></article>
+      <article class="item"><h3>«МЦ-Сервис Инжиниринг».</h3><p>За сессию команда разработала несколько десятков идей и сразу проверила их на реалистичность внедрения. Часть пошла в работу сразу после мероприятия.</p></article>
+    </div>
+    <p class="prose note">По каждому кейсу есть письмо-благодарность. Контакты для рекомендаций – по запросу.</p>
+  </div>
+</section>
+
+<section class="sec sec--soft" id="faq">
+  <div class="wrap prose">
+    <h2>Что обычно спрашивают</h2>
+    <div class="faq">
+      <details name="faq"><summary>В кризис режут расходы, а вы предлагаете потратить.</summary><p>Справедливо. Поэтому начинаем с разговора, а не с сессии. Если по итогам диагностики вижу, что задача решается без сессии, так и скажу.</p></details>
+      <details name="faq"><summary>Мы уже пробовали, закончилось тем, что переругались.</summary><p>Частый сценарий, и причина обычно в составе групп. Руководители высшего звена оказываются в одной группе с подчинёнными, разбирают их идеи как нереальные, те замолкают. В итоге новых предложений нет ни у кого: у младших их не дали высказать, у старших своих не оказалось. Исправляется это не модерацией по ходу, а тем, как собраны группы, и решается до сессии.</p></details>
+      <details name="faq"><summary>Два дня – это много, у нас всё горит.</summary><p>За один день успеть можно только диагностику и обсуждение. Решения по клиентам, переговорам и плану внедрения требуют второго дня: первый вскрывает картину, второй превращает её в план с фамилиями и сроками. Если два дня подряд выделить невозможно, разносим их по графику или собираем программу блоками.</p></details>
+      <details name="faq"><summary>Мы уже делали сессию, идеи были, но ничего не внедрили.</summary><p>Решения остались без ответственного, срока и критерия проверки. Поэтому план внедрения собирается на самой сессии, а не высылается потом.</p></details>
+      <details name="faq"><summary>Вы не знаете нашей отрасли.</summary><p>Отрасль знаете вы и ваша команда. Моя работа – сделать так, чтобы это знание вышло на стол и превратилось в решения.</p></details>
+      <details name="faq"><summary>Люди выгорели, им не до штурмов.</summary><p>Выгоревшей команде сессия не заменит отдыха и помощи специалиста. Но часть усталости в кризис – от непонимания, куда идём, и от ощущения, что от тебя ничего не зависит. Это сессия снимает.</p></details>
+      <details name="faq"><summary>Сколько стоит.</summary><p>Ориентировочно от 230 000 ₽ за день работы. Итоговая стоимость – после диагностики.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--dark" id="zayavka">
+  <div class="wrap form-wrap">
+    <h2>Расскажите, что происходит в компании</h2>
+    <p class="lead lead--light">30 минут. Разберём продажи, клиентов, переговорную ситуацию и состояние команды. По итогам скажу, нужен ли вам штаб, в каком формате и что можно сделать своими силами.</p>
+
+    <!-- Чтобы заявки приходили без почтовой программы: укажите адрес формы (например, Formspree) в data-endpoint -->
+    <form id="lead-form" data-endpoint="" novalidate>
+      <label>Имя
+        <input type="text" name="name" data-label="Имя" autocomplete="name" required>
+      </label>
+      <label>Компания и должность
+        <input type="text" name="company" data-label="Компания и должность" autocomplete="organization" required>
+      </label>
+      <label>Сфера
+        <select name="sphere" data-label="Сфера" required>
+          <option value="">Выберите вариант</option>
+          <option>Производство</option><option>Торговля</option><option>Сервис</option><option>Другое</option>
+        </select>
+      </label>
+      <label>Что беспокоит сильнее всего
+        <select name="concern" data-label="Что беспокоит" required>
+          <option value="">Выберите вариант</option>
+          <option>Падают продажи</option>
+          <option>Клиенты замораживают бюджеты и уходят</option>
+          <option>Давят поставщики, банк или сети</option>
+          <option>Команда демотивирована</option>
+          <option>Подразделения не договариваются между собой</option>
+        </select>
+      </label>
+      <label>Телефон или Telegram
+        <input type="text" name="contact" data-label="Телефон или Telegram" autocomplete="off" required>
+      </label>
+      <label class="check">
+        <input type="checkbox" name="consent" required>
+        <span>Я согласен на обработку персональных данных и ознакомлен с <a href="https://www.xn--80aafbmac3ahi2a7ak4a3c.xn--p1ai/privacy" target="_blank">политикой конфиденциальности</a></span>
+      </label>
+      <p class="form-err" id="lead-err" role="alert" hidden>Не удалось отправить. Позвоните или напишите в Telegram, контакты ниже.</p>
+      <button class="btn btn--block" type="submit">Отправить заявку</button>
+    </form>
+    <p class="ok" id="lead-ok" tabindex="-1" hidden></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="brand brand--light" href="#top">Алексей Урванцев</a>
+    <ul>
+      <li><a href="https://алексейурванцев.рф">алексейурванцев.рф</a></li>
+      <!-- TODO: на старой странице два разных ника (Alexey_Urvancev в шапке и AlexeyUrvancev в подвале) – оставьте верный -->
+      <li><a href="https://t.me/Alexey_Urvancev" target="_blank">Telegram @Alexey_Urvancev</a></li>
+      <li><a href="tel:+79035305894">+7 903 530 58 94</a></li>
+      <li><a href="mailto:mail@urvancev.info">mail@urvancev.info</a></li>
+      <li><a href="https://www.xn--80aafbmac3ahi2a7ak4a3c.xn--p1ai/privacy" target="_blank">Политика обработки персональных данных</a></li>
+      <li>Реквизиты ИП</li>
+    </ul>
+  </div>
+</footer>
+
+</div>
+<script>
+/*! urvancev-ux v1.0.0 | JS для лендинга «Антикризисная стратегическая сессия» (Tilda)
+ *
+ *  Что делает:
+ *   1. Типографика: неразрывные пробелы после предлогов, союзов и частиц, перед тире,
+ *      внутри чисел, телефонов, инициалов; последние два слова абзаца не разрываются.
+ *   2. Абзацы: двойные <br> превращаются в <p>, лишние одиночные <br> посреди
+ *      предложения заменяются пробелом, жирный заход абзаца выделяется классом .u-lead.
+ *   3. Мобильная панель «Обсудить ситуацию» + звонок.
+ *   4. Мелочи: высота меню для якорей, атрибуты автозаполнения, alt у картинок, lang="ru".
+ *
+ *  Отключить обработку для блока: добавьте атрибут data-no-typo на любой родительский элемент.
+ */
+(function () {
+  'use strict';
+
+  var NBSP = '\u00A0';
+
+  /* ================= Настройки ================= */
+  var CONFIG = {
+    root: '#allrecords',
+    ctaText: 'Обсудить ситуацию',
+    ctaTarget: '#zayavka',
+    phoneHref: 'tel:+79035305894',
+    stickyMaxWidth: 768,          // px: панель показывается на экранах не шире
+    showAfter: 0.7,               // панель появляется после прокрутки на 0.7 высоты экрана
+    maxBindLength: 22,            // макс. длина склейки «предпоследнее + последнее слово»
+    altByUrlPart: {               // подписи для картинок без alt (часть адреса картинки → alt)
+      'tild3933-3962-4436-a263-353835326338': 'Логотипы компаний-клиентов'
+    }
+  };
+
+  var TEXT_BLOCKS = '.t-text, .t-descr, .t-title, .t-heading, .t-name, p, li, h1, h2, h3, h4, h5, h6, figcaption';
+  var SKIP = 'script, style, noscript, textarea, input, select, option, code, pre, svg, [contenteditable], [data-no-typo]';
+
+  /* ================= 1. Типографика ================= */
+
+  // Слова, после которых пробел делаем неразрывным
+  var SHORT_WORDS = [
+    'а', 'б', 'в', 'ж', 'и', 'к', 'о', 'с', 'у', 'я',
+    'бы', 'во', 'да', 'до', 'же', 'за', 'из', 'ко', 'ли', 'на', 'не', 'ни', 'но',
+    'об', 'от', 'по', 'со', 'то', 'мы', 'вы', 'он', 'их',
+    'без', 'для', 'над', 'обо', 'под', 'при', 'про', 'или', 'что', 'как', 'чем'
+  ].join('|');
+
+  var RE_SHORT = new RegExp(
+    '(^|[\\s(«„“‘—–-])(' + SHORT_WORDS + ')(?:\\s+(?=\\S)|\\s+$)', 'giu'
+  );
+  var RE_DASH = /\s+([–—])(?=\s)/g;                      // слово — слово
+  var RE_HYPHEN_DASH = /\s-\s/g;                         // слово - слово → слово – слово
+  var RE_DIGIT_DIGIT = /(\d)[ \t\n\r]+(?=\d)/g;          // 230 000, +7 903 530
+  var RE_NUM_WORD = /([\d+%])[ \t\n\r]+(?=[A-Za-zА-Яа-яЁё₽])/g; // 90 дней, 500+ проектов, 230 000 ₽
+  var RE_INITIALS = /([А-ЯЁ]\.)[ \t\n\r]+(?=[А-ЯЁ])/g;   // А.Н. Радчук
+  var RE_ORG = /(^|[\s«„“])(ООО|ОАО|ЗАО|ПАО|АО|ИП)[ \t\n\r]+(?=\S)/g;
+
+  function typo(str) {
+    var out = str;
+    out = out.replace(RE_HYPHEN_DASH, NBSP + '– ');
+    out = out.replace(RE_DASH, NBSP + '$1');
+    // два прохода: «и в доме» — второй предлог иначе пропускается
+    for (var i = 0; i < 2; i++) {
+      out = out.replace(RE_SHORT, function (m, pre, word) { return pre + word + NBSP; });
+    }
+    out = out.replace(RE_DIGIT_DIGIT, '$1' + NBSP);
+    out = out.replace(RE_NUM_WORD, '$1' + NBSP);
+    out = out.replace(RE_INITIALS, '$1' + NBSP);
+    out = out.replace(RE_ORG, '$1$2' + NBSP);
+    return out;
+  }
+
+  function textNodes(root) {
+    var list = [];
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        var p = node.parentElement;
+        if (!p || p.closest(SKIP)) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    while (walker.nextNode()) list.push(walker.currentNode);
+    return list;
+  }
+
+  function applyTypography(root) {
+    textNodes(root).forEach(function (node) {
+      var next = typo(node.nodeValue);
+      if (next !== node.nodeValue) node.nodeValue = next;
+    });
+  }
+
+  // Последние два слова блока не разрываем, чтобы в конце не оставалось одно слово
+  function bindTails(root) {
+    root.querySelectorAll(TEXT_BLOCKS).forEach(function (el) {
+      if (el.closest(SKIP)) return;
+      var nodes = textNodes(el);
+      if (!nodes.length) return;
+      var node = nodes[nodes.length - 1];
+      var m = /(\S+)([ \t\n\r]+)(\S+)([ \t\n\r]*)$/.exec(node.nodeValue);
+      if (!m) return;
+      if (m[1].length + m[3].length + 1 > CONFIG.maxBindLength) return;
+      node.nodeValue = node.nodeValue.slice(0, m.index) + m[1] + NBSP + m[3] + m[4];
+    });
+  }
+
+  /* ================= 2. Абзацы и ручные переносы ================= */
+
+  // Двойные <br> → абзацы <p class="u-p">
+  function splitParagraphs(root) {
+    root.querySelectorAll('.t-text, .t-descr, [data-paragraphs]').forEach(function (el) {
+      if (el.closest(SKIP)) return;
+      if (el.querySelector('p, ul, ol, div, table, h1, h2, h3, h4, h5, h6')) return;
+      var html = el.innerHTML;
+      if (!/(<br\s*\/?>\s*){2,}/i.test(html)) return;
+      html = html
+        .replace(/^(\s*<br\s*\/?>)+/i, '')
+        .replace(/(<br\s*\/?>\s*)+$/i, '')
+        .replace(/(?:\s*<br\s*\/?>\s*){2,}/gi, '</p><p class="u-p">');
+      el.innerHTML = '<p class="u-p">' + html + '</p>';
+    });
+  }
+
+  function textBefore(br) {
+    var n = br.previousSibling;
+    while (n && n.nodeType === 3 && !n.nodeValue.trim()) n = n.previousSibling;
+    if (!n) return '';
+    return (n.textContent || '').replace(/\s+$/, '');
+  }
+  function textAfter(br) {
+    var n = br.nextSibling;
+    while (n && n.nodeType === 3 && !n.nodeValue.trim()) n = n.nextSibling;
+    if (!n) return '';
+    if (n.nodeType === 1 && n.tagName === 'BR') return '';
+    return (n.textContent || '').replace(/^\s+/, '');
+  }
+
+  // Одиночный <br> посреди предложения («выходите<br>с планом») → пробел.
+  // Оставляем, если перед ним конец предложения или после него заглавная буква.
+  function fixHardBreaks(root) {
+    root.querySelectorAll(TEXT_BLOCKS).forEach(function (el) {
+      if (el.closest(SKIP)) return;
+      Array.prototype.slice.call(el.querySelectorAll('br')).forEach(function (br) {
+        if (br.hasAttribute('data-keep')) return;
+        var before = textBefore(br);
+        var after = textAfter(br);
+        if (!before || !after) return;
+        if (/[.!?…:;»”)]$/.test(before)) return;
+        if (!/^[а-яёa-z]/.test(after)) return;
+        br.parentNode.replaceChild(document.createTextNode(' '), br);
+      });
+    });
+  }
+
+  // Жирный заход в начале абзаца → .u-lead (CSS выводит его отдельной строкой)
+  function markLeads(root) {
+    root.querySelectorAll('.t-text, .t-descr, p').forEach(function (el) {
+      if (el.closest(SKIP)) return;
+      var first = el.firstChild;
+      while (first && first.nodeType === 3 && !first.nodeValue.trim()) first = first.nextSibling;
+      if (!first || first.nodeType !== 1) return;
+      if (first.tagName !== 'STRONG' && first.tagName !== 'B') return;
+      var lead = (first.textContent || '').trim();
+      var total = (el.textContent || '').trim();
+      if (!/[.:]$/.test(lead)) return;                    // заход заканчивается точкой или двоеточием
+      if (total.length - lead.length < 20) return;       // абзац из одного жирного — не заход
+      first.classList.add('u-lead');
+    });
+  }
+
+  /* ================= 3. Нижняя панель ================= */
+
+  function initStickyCta() {
+    if (document.querySelector('.u-cta')) return;
+
+    var bar = document.createElement('div');
+    bar.className = 'u-cta';
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', 'Быстрая связь');
+    bar.innerHTML =
+      '<a class="u-cta__main" href="' + CONFIG.ctaTarget + '">' + CONFIG.ctaText + '</a>' +
+      '<a class="u-cta__call" href="' + CONFIG.phoneHref + '" aria-label="Позвонить">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>' +
+      '</a>';
+    document.body.appendChild(bar);
+
+    // Цвет берём с существующей кнопки заявки, чтобы не выдумывать палитру
+    var btn = document.querySelector(CONFIG.root + ' a.t-btn[href="' + CONFIG.ctaTarget + '"], ' +
+                                     CONFIG.root + ' a[href="' + CONFIG.ctaTarget + '"][class*="btn"]');
+    if (btn) {
+      var cs = window.getComputedStyle(btn);
+      var bg = cs.backgroundColor;
+      if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') {
+        document.documentElement.style.setProperty('--u-cta-bg', bg);
+        document.documentElement.style.setProperty('--u-cta-fg', cs.color);
+        if (cs.borderRadius) document.documentElement.style.setProperty('--u-cta-radius', cs.borderRadius);
+      }
+    }
+
+    var anchor = document.querySelector('a[name="zayavka"], [id="zayavka"]');
+    var typing = false;
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var mobile = window.innerWidth <= CONFIG.stickyMaxWidth;
+      var show = mobile && !typing && window.pageYOffset > window.innerHeight * CONFIG.showAfter;
+      if (show && anchor) {
+        // Когда дошли до формы, панель не нужна
+        if (anchor.getBoundingClientRect().top < window.innerHeight * 0.85) show = false;
+      }
+      bar.classList.toggle('is-visible', show);
+    }
+    function onScroll() {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    // Пока открыта клавиатура, панель прячем
+    document.addEventListener('focusin', function (e) {
+      if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) { typing = true; update(); }
+    });
+    document.addEventListener('focusout', function () { typing = false; onScroll(); });
+    update();
+  }
+
+  /* ================= 4. Мелочи ================= */
+
+  function measureHeader() {
+    var fixed = document.querySelectorAll(
+      CONFIG.root + ' [class*="positionfixed"], ' + CONFIG.root + ' header'
+    );
+    var h = 0;
+    Array.prototype.forEach.call(fixed, function (el) {
+      var pos = window.getComputedStyle(el).position;
+      if (pos === 'fixed' || pos === 'sticky') h = Math.max(h, el.offsetHeight);
+    });
+    if (h) document.documentElement.style.setProperty('--u-header-h', h + 'px');
+  }
+
+  function enhanceForms(root) {
+    root.querySelectorAll('input, textarea').forEach(function (el) {
+      if (el.hasAttribute('autocomplete')) return;
+      var key = ((el.name || '') + ' ' + (el.id || '') + ' ' + (el.placeholder || '')).toLowerCase();
+      if (/name|имя/.test(key)) el.setAttribute('autocomplete', 'name');
+      else if (/company|компан/.test(key)) el.setAttribute('autocomplete', 'organization');
+      // Поле «Телефон или Telegram» намеренно не трогаем: type=tel закрыл бы ввод @ника
+    });
+  }
+
+  function enhanceMedia(root) {
+    root.querySelectorAll('img').forEach(function (img) {
+      if (!img.hasAttribute('alt')) {
+        var alt = '';
+        var src = img.getAttribute('src') || img.getAttribute('data-original') || '';
+        Object.keys(CONFIG.altByUrlPart).forEach(function (part) {
+          if (src.indexOf(part) !== -1) alt = CONFIG.altByUrlPart[part];
+        });
+        img.setAttribute('alt', alt);
+      }
+      if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+    });
+    root.querySelectorAll('a[target="_blank"]').forEach(function (a) {
+      a.setAttribute('rel', 'noopener noreferrer');
+    });
+  }
+
+  /* ================= Запуск ================= */
+
+  function run() {
+    var root = document.querySelector(CONFIG.root);
+    if (!root) return;
+    if (!document.documentElement.lang) document.documentElement.lang = 'ru';
+
+    splitParagraphs(root);   // сначала структура
+    fixHardBreaks(root);
+    markLeads(root);
+    applyTypography(root);   // потом пробелы
+    bindTails(root);
+    enhanceForms(root);
+    enhanceMedia(root);
+    measureHeader();
+    initStickyCta();
+  }
+
+  function ready(fn) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+    else fn();
+  }
+
+  if (typeof document !== 'undefined') {
+    ready(run);
+    // Tilda дорисовывает часть блоков после загрузки; все шаги безопасны при повторном запуске
+    window.addEventListener('load', function () { run(); setTimeout(run, 1200); });
+    // Для ручного вызова из консоли
+    window.UrvancevUX = { typo: typo, run: run };
+  }
+  // Для тестов в Node
+  if (typeof module !== 'undefined' && module.exports) module.exports = { typo: typo };
+})();
+
+/* Форма заявки.
+   Если в index.html у формы заполнен data-endpoint (например, адрес Formspree) – заявка уходит туда.
+   Если пусто – открывается письмо на mail@urvancev.info с уже заполненным текстом. */
+(function () {
+  'use strict';
+  var MAIL = 'mail@urvancev.info';
+
+  var form = document.getElementById('lead-form');
+  if (!form) return;
+  var ok = document.getElementById('lead-ok');
+  var err = document.getElementById('lead-err');
+  var btn = form.querySelector('button[type="submit"]');
+
+  function markTouched() {
+    Array.prototype.forEach.call(form.elements, function (el) { el.classList.add('touched'); });
+  }
+
+  function done(text) {
+    ok.textContent = text;
+    form.hidden = true;
+    ok.hidden = false;
+    ok.focus();
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    err.hidden = true;
+
+    if (!form.checkValidity()) {
+      markTouched();
+      var bad = form.querySelector(':invalid');
+      if (bad) bad.focus();
+      return;
+    }
+
+    var data = new FormData(form);
+    var endpoint = form.getAttribute('data-endpoint');
+
+    if (endpoint) {
+      btn.disabled = true;
+      fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          done('Заявка получена. Напишу или позвоню в течение рабочего дня, чтобы договориться о времени разговора.');
+        })
+        .catch(function () { btn.disabled = false; err.hidden = false; });
+      return;
+    }
+
+    var lines = [];
+    data.forEach(function (value, key) {
+      var el = form.elements[key];
+      var label = el && el.getAttribute ? el.getAttribute('data-label') : null;
+      if (label) lines.push(label + ': ' + value);
+    });
+    window.location.href = 'mailto:' + MAIL +
+      '?subject=' + encodeURIComponent('Заявка на разговор') +
+      '&body=' + encodeURIComponent(lines.join('\n'));
+    done('Открыли письмо в вашей почтовой программе. Отправьте его, и я свяжусь с вами в течение рабочего дня.');
+  });
+})();
+
+/* Тезис проявляется по словам при прокрутке (один выразительный момент на странице) */
+(function () {
+  'use strict';
+  var els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ticking = false;
+
+  function update() {
+    ticking = false;
+    var vh = window.innerHeight;
+    Array.prototype.forEach.call(els, function (el) {
+      var p = (vh * 0.9 - el.getBoundingClientRect().top) / (vh * 0.65);
+      p = Math.max(0, Math.min(1, p));
+      var ws = el.querySelectorAll('.w');
+      var n = Math.round(p * ws.length);
+      for (var i = 0; i < ws.length; i++) ws[i].classList.toggle('on', i < n);
+    });
+  }
+  function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+  function init() {
+    Array.prototype.forEach.call(els, function (el) {
+      if (el.getAttribute('data-ready')) return;
+      el.setAttribute('data-ready', '1');
+      var words = el.textContent.trim().split(/ +/);   // неразрывные пробелы не трогаем
+      el.textContent = '';
+      words.forEach(function (w) {
+        var s = document.createElement('span');
+        s.className = 'w'; s.textContent = w;
+        el.appendChild(s); el.appendChild(document.createTextNode(' '));
+      });
+    });
+    if (reduce) {
+      Array.prototype.forEach.call(document.querySelectorAll('.reveal .w'), function (w) { w.classList.add('on'); });
+      return;
+    }
+    document.documentElement.classList.add('js-reveal');
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+  }
+  // после типографики (она работает на load), чтобы неразрывные пробелы сохранились
+  window.addEventListener('load', init);
+})();
+
+/* Вкладки «Для кого» */
+(function () {
+  'use strict';
+  Array.prototype.forEach.call(document.querySelectorAll('.tabbed'), function (box) {
+    var btns = Array.prototype.slice.call(box.querySelectorAll('[role="tab"]'));
+    var panels = Array.prototype.slice.call(box.querySelectorAll('.tabpanel'));
+    function select(i, focus) {
+      btns.forEach(function (b, n) { b.setAttribute('aria-selected', n === i ? 'true' : 'false'); b.tabIndex = n === i ? 0 : -1; });
+      panels.forEach(function (p, n) { p.hidden = n !== i; });
+      if (focus) btns[i].focus();
+    }
+    btns.forEach(function (b, i) {
+      b.addEventListener('click', function () { select(i); });
+      b.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') select((i + 1) % btns.length, true);
+        else if (e.key === 'ArrowLeft') select((i - 1 + btns.length) % btns.length, true);
+      });
+    });
+    select(0);
+  });
+})();
+
+</script>
+</body>
+</html>
