@@ -474,3 +474,6 @@ header.top .btn{padding:.55em 1.3em;min-height:44px}
 
 h1,h2,h3{text-wrap:balance}
 p,li,.qa,.pill span{text-wrap:pretty}
+@media(max-width:860px){
+  .rc::before{offset-path:none;animation:none;left:50%;top:-22px;transform:translateX(-50%)}
+}
