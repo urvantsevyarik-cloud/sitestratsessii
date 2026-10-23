@@ -5,7 +5,7 @@ const CONFIG = {
   VK_PIXEL_ID: "",          // номер пикселя VK Реклама / top.mail.ru
   POLICY_URL: "#",          // ссылка на политику обработки персональных данных
   REQS_URL: "#",            // ссылка на реквизиты ИП
-  TELEGRAM: "https://t.me/AlexeyUrvancev"
+  TELEGRAM: "https://t.me/Alexey_Urvancev"
 };
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -34,7 +34,7 @@ $$("[data-reqs]").forEach(a => a.href = CONFIG.REQS_URL);
 
 /* Заголовок: ?h=a или ?h=b для теста */
 const heads = {
-  main: "План на 90 дней, который <b class=\"ac\">команда начнёт выполнять в понедельник</b>",
+  main: "План на 90 дней, который <b class=\"ac\">команда начнёт выполнять сразу</b>",
   a: "Что делать, когда <b class=\"ac\">резать уже нечего</b>, а продажи всё равно падают",
   b: "В антикризисном плане записано, <b class=\"ac\">когда мы из него выходим</b>. В обычном – нет"
 };
@@ -48,23 +48,6 @@ burger.addEventListener("click", () => {
   burger.setAttribute("aria-expanded", open);
 });
 $$("#nav a").forEach(a => a.addEventListener("click", () => { hdr.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }));
-
-/* Вопросы с «?» */
-const ANS = [
-  ["Справедливо.", "Поэтому начинаем с разговора, а не с сессии: <mark>если задача решается без неё, я так и скажу</mark>."],
-  ["Обычно причина в составе групп.", "Топы оказались в одной группе с подчинёнными и разобрали их идеи как нереальные. Это решается до сессии, а не модерацией по ходу."],
-  ["За один день успеть можно только диагностику.", "Если два дня подряд выделить невозможно, разносим их по графику."],
-  ["Решения остались без ответственного, срока и критерия проверки.", "Поэтому план внедрения собирается на самой сессии, а не высылается потом."],
-  ["Отрасль знаете вы и ваша команда.", "Моя работа – сделать так, чтобы это знание вышло на стол и превратилось в решения."],
-  ["Очно, на вашей территории.", ""],
-  ["Диагностика – 200\u00a0000\u00a0₽, день сессии – 200\u00a0000\u00a0₽, сопровождение – 400\u00a0000\u00a0₽ за 16 часов.", "Это ориентир: итоговая стоимость – после диагностики. Для юридических лиц РФ при заказе от 500\u00a0000\u00a0₽ возможна рассрочка или факторинг."]
-];
-const qps = $$(".qp");
-qps.forEach(b => b.addEventListener("click", () => {
-  qps.forEach(x => x.setAttribute("aria-pressed", x === b));
-  const a = ANS[+b.dataset.k];
-  $("#qa").innerHTML = `<b>${a[0]}</b>${a[1]}`;
-}));
 
 /* Диалоги */
 const formDlg = $("#formDlg"), lbDlg = $("#lbDlg");
@@ -105,13 +88,13 @@ $$("[data-form]").forEach(box => {
     e.preventDefault(); err.hidden = true;
     const bad = $$("input[required]", f).find(i => i.type === "checkbox" ? !i.checked : !i.value.trim());
     if (bad) return fail(bad.type === "checkbox" ? "Подтвердите согласие на обработку данных." : "Заполните имя и телефон или Telegram.", bad);
-    if (!CONFIG.FORM_ENDPOINT) return fail("Форма пока не подключена к приёму заявок. Напишите в Telegram @AlexeyUrvancev.");
+    if (!CONFIG.FORM_ENDPOINT) return fail("Форма пока не подключена к приёму заявок. Напишите в Telegram @Alexey_Urvancev.");
     try {
       const r = await fetch(CONFIG.FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(Object.fromEntries(new FormData(f))) });
       if (!r.ok) throw 0;
       goal(pos);
       box.innerHTML = '<p class="ok" role="status">Заявка получена. Напишу или позвоню в течение рабочего дня, чтобы договориться о времени разговора.</p>';
-    } catch { fail("Не удалось отправить. Попробуйте ещё раз или напишите в Telegram @AlexeyUrvancev."); }
+    } catch { fail("Не удалось отправить. Попробуйте ещё раз или напишите в Telegram @Alexey_Urvancev."); }
   });
 });
 
